@@ -1,25 +1,16 @@
-<!DOCTYPE html>
-<html>
-
 @font-face{
-  font-family: "Myfont1";
-  src: url("Gotham-UltraItalic.otf");
-}
-@font-face{
-  font-family: "Myfont";
-  src: url("Gotham-Black.otf");
-}
-
-@font-face{
-  font-family: "myfont3";
-  src: url("new.ttf");
-}
-      
-<head>
-	<title>faculty</title>
-  <style>
+    font-family: "Myfont1";
+    src: url("Gotham-UltraItalic.otf");
+  }
+  @font-face{
+    font-family: "Myfont";
+    src: url("Gotham-Black.otf");
+  }
   
-  
+  @font-face{
+    font-family: "myfont3";
+    src: url("new.ttf");
+  }
   body {
       background-color: #887ef3;
       color: #371744;
@@ -36,7 +27,7 @@
       left: 0;
       right: 0;
       display: flex;
-      font-family: "MyFont";
+      font-family: "MyFont3";
       flex-direction: column;
       align-items: center;
       padding: 0;
@@ -58,7 +49,7 @@
     
     header h1 {
       color: #212c92;
-      font-family: "myfont3";
+      font-family: "Myfont3";
       font-size: 50px;
       text-shadow: 4px 4px 4px #51799e;
     }
@@ -231,61 +222,43 @@
       text-shadow: 2px 2px 4px #b6a4bb;
       text-align: center;
   }
-  
-  
-  </style>
-	
-</head>
+
+  table {
+    width: 50%;
+    border-collapse: collapse;
+    text-align: center;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+td, th {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 2px solid black;
+    border-top: 2px solid black;
+    border-right: none;
+    border-left: none;
+    font-size: 16px;
+}
+
+th {
+    background-color: #ddd;
+}
+
+#bottom-right {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    font-size: 36px;
+    font-family: myfont1;
+    width: 400px;
+    height: 100px;
+  }
 
 
-<header>
-	<div class="header-back">
-	  <h1>CONTACT DIRECTORY</sub></h1>
-	  
-	</div>
-  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='faculty.css') }}">
-	<div class="text-background">
-	  <nav>
-		<ul>
-		  <li><a href="home.html">Home</a></li>
-      <li class="dropdown">
-        <a href="#" class="dropbtn">Add</a>
-        <div class="dropdown-content">
-          <a href="students.html">Students</a>
-          <a href="faculties.html">Faculty</a>
-        </div>
-        </li>
-		  <li><a href="display.html">Students</a></li>
-      <li><a href="display1.html">Faculty</a></li>
-      <li><a href="search.html">Search</a></li>
-		</ul>
-	  </nav>
-	</div>
-</header>
-
-<body>
-  <div class="container">
-	<div class="text"><b>FACULTY</b></div>
-	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-    <form method="POST" action="{{ url_for('faculties') }}">
-      <form methods="POST" action="./faculties">
-      <label for="name" style="font-size: 20px;margin-left: 40%;">Name:</label>
-      <input type="text" name="name" id="name" style="font-size: 25px;margin-left: 15%;" required><br><br>
-      <label for="faculty_id" style="font-size: 20px;margin-left: 40%;">Faculty Id:</label>
-      <input type="text" name="rollno" id="rollno" style="font-size: 25px;margin-left: 15%;" required><br><br>
-      <label for="email" style="font-size: 20px;margin-left: 40%;">Email ID:</label>
-      <input type="email" name="email" id="email" style="font-size: 25px;margin-left: 15%;" required><br><br>
-      <label for="contact" style="font-size: 20px;margin-left: 40%;">Contact No.:</label>
-      <input type="text" name="contact" id="contact" style="font-size: 25px;margin-left: 15%;" required><br><br>
-      <label for="Qualifications" style="font-size: 20px;margin-left: 40%;">Qualifications:</label>
-      <input type="text" name="branch" id="qualificatiions" style="font-size: 25px;margin-left: 15%;" required><br><br>
-      <button type="submit" style="font-size: 25px;margin-left: 45%;">SUBMIT</button>
-    </form>
-  </div>
-
-  <a href="{{ url_for('addPage') }}" id="bottom-right">
-    <button>HOME</button>
-  </a>
-</body>
-
-</html>
+  .table-container {
+    height: 500px;
+    overflow-y: auto;
+}

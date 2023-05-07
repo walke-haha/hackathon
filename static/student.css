@@ -236,4 +236,10 @@ form {
   border: 2px solid black;
   padding: 20px;
 }
+
+#bottom-right {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+}
   

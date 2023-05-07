@@ -252,7 +252,8 @@
           <a href="faculties.html">Faculty</a>
         </div>
         </li>
-		  <li><a href="display.html">Display</a></li>
+        <li><a href="display.html">Students</a></li>
+        <li><a href="display1.html">Faculty</a></li>
       <li><a href="search.html">Search</a></li>
 		</ul>
 	  </nav>
@@ -275,8 +276,12 @@
         <input type="text" name="contact" id="contact" style="font-size: 25px;margin-left: 12%;" required><br><br>
         <label for="branch" style="font-size: 20px;margin-left: 41.12%;">Branch:</label>
         <input type="text" name="branch" id="branch" style="font-size: 25px;margin-left: 12%;" required><br><br>
-        <button type="submit" style="font-size: 20px;margin-left: 41.12%;">SUBMIT</button>
+        <button type="submit" style="font-size: 25px;margin-left: 41.12%;">SUBMIT</button>
       </form>
     </div>
+    <a href="{{ url_for('addPage') }}" id="bottom-right">
+      <button>HOME</button>
+    </a>
+
     <script src="home.js"></script>
 </body>
