@@ -9,8 +9,7 @@ cursor.execute('''CREATE TABLE students(
     rollno INTEGER,
     email TEXT,
     contact INTEGER,
-    branch TEXT,
-    address TEXT
+    branch TEXT
 );''')
                
 cursor.execute('''CREATE TABLE faculty (

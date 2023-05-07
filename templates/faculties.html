@@ -1,22 +1,25 @@
 <!DOCTYPE html>
 <html>
+
+@font-face{
+  font-family: "Myfont1";
+  src: url("Gotham-UltraItalic.otf");
+}
+@font-face{
+  font-family: "Myfont";
+  src: url("Gotham-Black.otf");
+}
+
+@font-face{
+  font-family: "myfont3";
+  src: url("new.ttf");
+}
       
 <head>
 	<title>faculty</title>
   <style>
-    @font-face{
-    font-family: "Myfont1";
-    src: url("Gotham-UltraItalic.otf");
-  }
-  @font-face{
-    font-family: "Myfont";
-    src: url("Gotham-Black.otf");
-  }
   
-  @font-face{
-    font-family: "myfont3";
-    src: url("new.ttf");
-  }
+  
   body {
       background-color: #887ef3;
       color: #371744;
@@ -240,11 +243,20 @@
 	  <h1>CONTACT DIRECTORY</sub></h1>
 	  
 	</div>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='faculty.css') }}">
 	<div class="text-background">
 	  <nav>
 		<ul>
 		  <li><a href="home.html">Home</a></li>
-		  <li><a href="about.html">About</a></li>
+      <li class="dropdown">
+        <a href="#" class="dropbtn">Add</a>
+        <div class="dropdown-content">
+          <a href="students.html">Students</a>
+          <a href="faculties.html">Faculty</a>
+        </div>
+        </li>
+		  <li><a href="display.html">Display</a></li>
+      <li><a href="search.html">Search</a></li>
 		</ul>
 	  </nav>
 	</div>
@@ -253,7 +265,7 @@
 <body>
 	<div class="text"><b>FACULTY</b></div>
 	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-    <!-- <form method="POST" action="{{ url_for('faculties') }}"> -->
+    <form method="POST" action="{{ url_for('faculties') }}">
       <form methods="POST" action="./faculties">
       <label for="name" style="font-size: 38px;margin-left: 41.5%;">Name:</label>
       <input type="text" name="name" id="name" style="font-size: 25px;margin-left: 1%;" required><br><br>

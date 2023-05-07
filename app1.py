@@ -4,6 +4,16 @@ from flask import Flask, request, render_template, redirect, url_for, json, json
 app = Flask(__name__)
 
 conn = sqlite3.connect('database.db')
+# cursor = conn.cursor()
+# cursor.execute('''CREATE TABLE students(
+#     id INTEGER PRIMARY KEY,
+#     name TEXT,
+#     rollno INTEGER,
+#     email TEXT,
+#     contact INTEGER,
+#     branch TEXT,
+#     address TEXT
+# );''')
 
 
 conn.commit()
@@ -34,13 +44,12 @@ def students():
 
 @app.route("/students", methods = ['POST'])
 def addStudent() -> str:
-    data = {"name": "", "email": "", "rollno": "", "contact": "", "program": "", "address": ""}
+    data = {"name": "", "email": "", "rollno": "", "contact": "", "program": ""}
     name = request.form.get("name")
     rollno = request.form.get("rollno")
     email = request.form.get("email")
     contact = request.form.get("contact")
-    program = request.form.get("branch")
-    address = request.form.get("address")    
+    program = request.form.get("branch")  
     
     with sqlite3.connect('database.db') as database:
             cursor = database.cursor()
@@ -52,9 +61,10 @@ def addStudent() -> str:
             if len(data) != 0:
                 return render_template("fail.html")
             else:
-                cursor.execute("INSERT INTO students (name, rollno, email, contact, branch, address) VALUES (?, ?, ?, ?, ?, ?)", (name, rollno, email, contact, program, address))
+                cursor.execute("INSERT INTO students (name, rollno, email, contact, branch) VALUES (?, ?, ?, ?, ?)", (name, rollno, email, contact, program))
                 database.commit()
 
                 return render_template("home.html")
 if __name__ == "__main__":
-	app.run(debug = True)
+	app.run(debug = True, port=5000)
+    

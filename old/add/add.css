@@ -1,10 +1,4 @@
-<DOCTYPE html>
-    <html>
-      <head>
-        <meta charset="UTF-8">
-        <title>Students</title>
-		<style>
-			@font-face{
+@font-face{
     font-family: "Myfont1";
     src: url("Gotham-UltraItalic.otf");
   }
@@ -33,7 +27,7 @@
       left: 0;
       right: 0;
       display: flex;
-      font-family: "MyFont3";
+      font-family: "MyFont";
       flex-direction: column;
       align-items: center;
       padding: 0;
@@ -55,7 +49,7 @@
     
     header h1 {
       color: #212c92;
-      font-family: "Myfont3";
+      font-family: "myfont3";
       font-size: 50px;
       text-shadow: 4px 4px 4px #51799e;
     }
@@ -229,54 +223,5 @@
       text-align: center;
   }
   
-		</style>
-    </html>
-    <br />
-</DOCTYPE>
   
-
-<header>
-	<div class="header-back">
-	  <h1>CONTACT DIRECTORY</sub></h1>
-	  
-	</div>
-  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='student.css') }}">
-	<div class="text-background">
-	  <nav>
-		<ul>
-		  <li><a href="home.html">Home</a></li>
-      <li class="dropdown">
-        <a href="#" class="dropbtn">Add</a>
-        <div class="dropdown-content">
-          <a href="students.html">Students</a>
-          <a href="faculties.html">Faculty</a>
-        </div>
-        </li>
-		  <li><a href="display.html">Display</a></li>
-      <li><a href="search.html">Search</a></li>
-		</ul>
-	  </nav>
-	</div>
-</header>
-<body>
-
-  <div class="container">
-    
-  <div class="text"><b>STUDENTS</b></div>
-	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-    <form method="POST" action="/students">
-        <label for="name" style="font-size: 20px;margin-left: 41.5%;">Name:</label>
-        <input type="text" name="name" id="name" style="font-size: 25px;margin-left: 12%;" required><br><br>
-        <label for="rollno" style="font-size: 20px;margin-left: 41.12%;">Roll No.:</label>
-        <input type="text" name="rollno" id="rollno" style="font-size: 25px;margin-left: 12%;" required><br><br>
-        <label for="email" style="font-size: 20px;margin-left: 41.12%;">Email ID:</label>
-        <input type="email" name="email" id="email" style="font-size: 25px;margin-left: 12%;" required><br><br>
-        <label for="contact" style="font-size: 20px;margin-left: 41.12%;">Contact No:</label>
-        <input type="text" name="contact" id="contact" style="font-size: 25px;margin-left: 12%;" required><br><br>
-        <label for="branch" style="font-size: 20px;margin-left: 41.12%;">Branch:</label>
-        <input type="text" name="branch" id="branch" style="font-size: 25px;margin-left: 12%;" required><br><br>
-        <button type="submit" style="font-size: 20px;margin-left: 41.12%;">SUBMIT</button>
-      </form>
-    </div>
-    <script src="home.js"></script>
-</body>
+ 
