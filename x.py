@@ -12,7 +12,7 @@ cursor.execute('''CREATE TABLE IF NOT EXISTS students(
     branch TEXT
 );''')
                
-cursor.execute('''CREATE TABLE IF NOT EXISTS faculty (
+cursor.execute('''CREATE TABLE IF NOT EXISTS faculties(
     id INTEGER PRIMARY KEY,
     name TEXT,
     faculty_id INTEGER,
@@ -20,6 +20,9 @@ cursor.execute('''CREATE TABLE IF NOT EXISTS faculty (
     phone_number INTEGER,
     qualifications TEXT
 );''')
+x=9898
+y=989989
+# cursor.execute(f"INSERT INTO faculty (sama,?,sairam@gmail.com,?,cse)",(9898,9899899))      
 
 conn.commit()
 

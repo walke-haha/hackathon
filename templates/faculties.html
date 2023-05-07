@@ -267,21 +267,21 @@
   <div class="container">
 	<div class="text"><b>FACULTY</b></div>
 	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-    <form method="POST" action="{{ url_for('faculties') }}">
-      <form methods="POST" action="./faculties">
+    <form method="POST" action="/faculties">
       <label for="name" style="font-size: 20px;margin-left: 40%;">Name:</label>
       <input type="text" name="name" id="name" style="font-size: 25px;margin-left: 15%;" required><br><br>
       <label for="faculty_id" style="font-size: 20px;margin-left: 40%;">Faculty Id:</label>
-      <input type="text" name="rollno" id="rollno" style="font-size: 25px;margin-left: 15%;" required><br><br>
+      <input type="text" name="faculty_id" id="faculty_id" style="font-size: 25px;margin-left: 15%;" required><br><br>
       <label for="email" style="font-size: 20px;margin-left: 40%;">Email ID:</label>
       <input type="email" name="email" id="email" style="font-size: 25px;margin-left: 15%;" required><br><br>
-      <label for="contact" style="font-size: 20px;margin-left: 40%;">Contact No.:</label>
-      <input type="text" name="contact" id="contact" style="font-size: 25px;margin-left: 15%;" required><br><br>
-      <label for="Qualifications" style="font-size: 20px;margin-left: 40%;">Qualifications:</label>
-      <input type="text" name="branch" id="qualificatiions" style="font-size: 25px;margin-left: 15%;" required><br><br>
+      <label for="phone_no" style="font-size: 20px;margin-left: 40%;">Contact No.:</label>
+      <input type="text" name="phone_no" id="phone_no" style="font-size: 25px;margin-left: 15%;" required><br><br>
+      <label for="qualifications" style="font-size: 20px;margin-left: 40%;">Qualifications:</label>
+      <input type="text" name="branch" id="qualifications" style="font-size: 25px;margin-left: 15%;" required><br><br>
       <button type="submit" style="font-size: 25px;margin-left: 45%;">SUBMIT</button>
     </form>
   </div>
+
 
   <a href="{{ url_for('addPage') }}" id="bottom-right">
     <button>HOME</button>
